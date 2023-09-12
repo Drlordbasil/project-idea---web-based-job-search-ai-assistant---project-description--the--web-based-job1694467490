@@ -78,7 +78,9 @@ class JobSearchAIAssistant:
         return job_postings
 
     def filter_job_postings(self):
-        self.filtered_postings = [posting for posting in self.job_postings if self.criteria_met(posting)]
+        self.filtered_postings = [
+            posting for posting in self.job_postings if self.criteria_met(posting)
+        ]
 
     def criteria_met(self, posting):
         # TODO: Implement logic to determine if a job posting meets the predefined criteria
